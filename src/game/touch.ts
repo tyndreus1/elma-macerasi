@@ -5,15 +5,16 @@ let bound = false;
 let wantVisible = false;
 
 function isTouchDevice() {
-  return window.matchMedia("(pointer: coarse)").matches || "ontouchstart" in window;
+  const coarse = window.matchMedia("(pointer: coarse)").matches;
+  const noHover = window.matchMedia("(hover: none)").matches;
+  return coarse || noHover;
 }
 
 function shouldShow() {
   if (!wantVisible) return false;
   const q = new URLSearchParams(location.search);
   if (q.get("touch") === "1") return true;
-  const small = window.innerWidth <= 960 || window.innerHeight <= 540;
-  return isTouchDevice() || small;
+  return isTouchDevice();
 }
 
 export function showTouch(show: boolean) {

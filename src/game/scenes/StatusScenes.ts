@@ -78,7 +78,7 @@ export class GameOverScene extends MenuScene {
     showTouch(false);
     this.drawBg("sky-kale", "hill-castle");
     pixelText(this, GAME_W / 2, 28, "OYUN BİTTİ", { scale: 2, color: 0xff8080, originX: 0.5, stroke: true });
-    pixelText(this, GAME_W / 2, 56, "Elmalar bitti... bir daha!", {
+    pixelText(this, GAME_W / 2, 56, "Canlar bitti... bir daha!", {
       scale: 1,
       color: 0xfff0c0,
       originX: 0.5,

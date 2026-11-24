@@ -43,7 +43,7 @@ export class TitleScene extends Phaser.Scene {
     }
 
     this.add.sprite(78, 224, "dad", "0").setOrigin(0.5, 1).play("dad-idle");
-    this.add.sprite(402, 224, "boy", "0").setOrigin(0.5, 1).play("boy-idle");
+    this.add.sprite(402, 224, "boy", "0").setOrigin(0.5, 1).play("dad-idle");
 
     pixelText(this, GAME_W / 2, 4, "ELMA MACERASI", {
       scale: 2,
@@ -87,13 +87,13 @@ export class TitleScene extends Phaser.Scene {
       ease: "Sine.inOut",
     });
 
-    pixelText(this, GAME_W / 2, 250, "P1 WASD+F   P2 Yon+K", {
+    pixelText(this, GAME_W / 2, 244, "P1 WASD+F   P2 Yon+K", {
       scale: 1,
       color: 0xfff0a0,
       originX: 0.5,
       stroke: true,
     });
-    pixelText(this, GAME_W / 2, 262, "ENTER / Hazır", {
+    pixelText(this, GAME_W / 2, 256, "ENTER / Hazır", {
       scale: 1,
       color: 0xd0e8ff,
       originX: 0.5,
