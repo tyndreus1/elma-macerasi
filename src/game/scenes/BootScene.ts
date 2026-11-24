@@ -1,5 +1,6 @@
 import Phaser from "phaser";
 import { createAllTextures } from "../sprites";
+import { ensureBossWalkAnims } from "../bossWalk";
 import { TITLE_HEROES_DATA_URL } from "../titleHeroesUrl";
 
 export class BootScene extends Phaser.Scene {
@@ -13,6 +14,7 @@ export class BootScene extends Phaser.Scene {
 
   create() {
     createAllTextures(this);
+    ensureBossWalkAnims(this);
     this.scene.start("title");
   }
 }
