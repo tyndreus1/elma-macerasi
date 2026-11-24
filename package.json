@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite --host --port 43180",
     "build": "tsc --noEmit && vite build",
+    "build:pages": "tsc --noEmit && vite build --config vite.pages.config.ts",
     "preview": "vite preview --host --port 43180"
   },
   "dependencies": {
