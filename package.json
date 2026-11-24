@@ -1,0 +1,19 @@
+{
+  "name": "elma-macerasi",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Elma Macerası — Murat ve Ege için 2 oyunculu piksel arcade",
+  "scripts": {
+    "dev": "vite --host --port 43180",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host --port 43180"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#081018" />
+    <title>Elma Macerası</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🍎</text></svg>" />
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <div id="rotate-hint" aria-live="polite">
+      <div class="phone"></div>
+      <p>Telefonu yan çevirin</p>
+      <small>Elma Macerası yatay oynanır</small>
+    </div>
+
+    <div id="touch-root" hidden data-mode="one">
+      <div class="pad pad-p1">
+        <div class="dpad">
+          <button class="ctrl" type="button" data-p="0" data-act="left" aria-label="Sola">◀</button>
+          <button class="ctrl" type="button" data-p="0" data-act="right" aria-label="Sağa">▶</button>
+        </div>
+        <div class="actions">
+          <button class="ctrl wide" type="button" data-p="0" data-act="jump">Zıpla</button>
+          <button class="ctrl wide" type="button" data-p="0" data-act="throw">Elma</button>
+        </div>
+      </div>
+      <div class="pad pad-p2">
+        <div class="dpad">
+          <button class="ctrl" type="button" data-p="1" data-act="left" aria-label="Sola">◀</button>
+          <button class="ctrl" type="button" data-p="1" data-act="right" aria-label="Sağa">▶</button>
+        </div>
+        <div class="actions">
+          <button class="ctrl wide" type="button" data-p="1" data-act="jump">Zıpla</button>
+          <button class="ctrl wide" type="button" data-p="1" data-act="throw">Elma</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
