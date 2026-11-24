@@ -1,10 +1,10 @@
 # Elma Macerası
 
+Canlı oyun: https://tyndreus1.github.io/elma-macerasi/
+
 Murat ve oğlu Ege (12) için piksel-art, yan kaydırmalı kooperatif arcade. Süper Mario tarzı zıplama / hendek / platform ile Final Fight tarzı yürüyen sevimli düşmanlar ve seviye sonu patronları karışımı. Düşmanlar şirin: huysuz mantarlar, yaramaz kirpiler, kaygan salyangozlar ve zıpzıp jöleler. Kan yok.
 
 Elmalar hem puan hem cephane. Elma atarak düşmanları alt edin; elma bitince küçük bir tekme / itme kalır.
-
-Canlı oyun: https://tyndreus1.github.io/elma-macerasi/
 
 ## Nasıl oynanır
 
@@ -70,6 +70,8 @@ npm run preview
 **Netlify:** `netlify.toml` derlemeyi `npm run build`, yayını `dist` olarak ayarlar. Repoyu Netlify’ye bağlayın.
 
 **GitHub Pages:** `.github/workflows/deploy-pages.yml` `main` dalına her push’ta derler ve Pages’e yükler. Repo ayarlarında Pages kaynağı **GitHub Actions** olmalı.
+
+Oyun: https://tyndreus1.github.io/elma-macerasi/
 
 ## Teknik
 
