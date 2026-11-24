@@ -69,9 +69,9 @@ npm run preview
 
 **Netlify:** `netlify.toml` derlemeyi `npm run build`, yayını `dist` olarak ayarlar. Repoyu Netlify’ye bağlayın.
 
-**GitHub Pages:** `.github/workflows/deploy-pages.yml` `main` dalına her push’ta derler ve Pages’e yükler. Repo ayarlarında Pages kaynağı **GitHub Actions** olmalı.
+**GitHub Pages:** Canlı oyun https://tyndreus1.github.io/elma-macerasi/
 
-Oyun: https://tyndreus1.github.io/elma-macerasi/
+`.github/workflows/deploy-pages.yml` kaynak repoda `main` push’larında derler. Proje Pages’ini ilk kez açmak için **Settings → Pages → Source: GitHub Actions** gerekir; `GITHUB_TOKEN` siteyi kendisi oluşturamaz. Bu yüzden derlenmiş oyun kullanıcı sitesinde (`tyndreus1.github.io/elma-macerasi/`) yayınlanır.
 
 ## Teknik
 
