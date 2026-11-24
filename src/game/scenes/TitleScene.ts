@@ -43,7 +43,7 @@ export class TitleScene extends Phaser.Scene {
     }
 
     this.add.sprite(78, 224, "dad", "0").setOrigin(0.5, 1).play("dad-idle");
-    this.add.sprite(402, 224, "boy", "0").setOrigin(0.5, 1).play("dad-idle");
+    this.add.sprite(402, 224, "boy", "0").setOrigin(0.5, 1).play("boy-idle");
 
     pixelText(this, GAME_W / 2, 4, "ELMA MACERASI", {
       scale: 2,

@@ -215,7 +215,7 @@ export class Foe extends Phaser.Physics.Arcade.Sprite {
     } else {
       body.setSize(this.width * 0.7, this.height * 0.75);
     }
-    this.play(`${kind}-walk`, true);
+    this.playWalk();
     this.setFlipX(this.facing < 0);
   }
 
@@ -278,7 +278,13 @@ export class Foe extends Phaser.Physics.Arcade.Sprite {
       }
     }
     this.setFlipX(this.facing < 0);
-    if (this.anims.currentAnim?.key !== `${this.kind}-walk`) this.play(`${this.kind}-walk`, true);
+    this.playWalk();
+  }
+
+  private playWalk() {
+    const key = `${this.kind}-walk`;
+    if (!this.scene.anims.exists(key)) return;
+    if (this.anims.currentAnim?.key !== key) this.play(key, true);
   }
 }
 
