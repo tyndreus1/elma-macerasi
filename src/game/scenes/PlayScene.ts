@@ -94,12 +94,12 @@ export class PlayScene extends Phaser.Scene {
       new URLSearchParams(typeof location !== "undefined" ? location.search : "").get("boss") === "1";
     if (jumpBoss) {
       this.registry.set("startAtBoss", false);
-      const bx = this.level.boss.x * TILE - 48;
+      const bx = this.level.boss.x * TILE - 160;
       this.heroes.forEach((h, i) => {
         h.setPosition(bx + i * 28, 180);
         h.lastSafeX = h.x;
         h.lastSafeY = h.y;
-        h.invulnUntil = this.time.now + 2500;
+        h.invulnUntil = this.time.now + 3500;
       });
       this.cameras.main.centerOn(this.level.boss.x * TILE - 40, GAME_H / 2);
       this.maybeSpawnBoss();
@@ -165,7 +165,7 @@ export class PlayScene extends Phaser.Scene {
         h.score = carry.score[i] ?? 0;
       }
       this.heroes.push(h);
-      h.invulnUntil = this.time.now + 1200;
+      h.invulnUntil = this.time.now + 2000;
     }
     for (const e of this.level.enemies) {
       const foe = new Foe(this, e.x * TILE + 8, e.y * TILE, e.kind, e.hp ?? 1);
@@ -329,7 +329,8 @@ export class PlayScene extends Phaser.Scene {
     this.camLock = true;
     sfx.boss();
     const b = this.level.boss;
-    this.boss = new Foe(this, b.x * TILE, b.y * TILE, b.kind, b.hp, { boss: true, speed: 55 });
+    this.boss = new Foe(this, b.x * TILE, b.y * TILE, b.kind, b.hp, { boss: true, speed: 42 });
+    this.boss.stunUntil = this.time.now + 900;
     this.foes.add(this.boss);
     const label = pixelText(this, GAME_W / 2, 36, b.name, {
       scale: 2,
